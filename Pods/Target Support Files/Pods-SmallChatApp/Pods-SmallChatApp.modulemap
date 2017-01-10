@@ -1,0 +1,6 @@
+framework module Pods_SmallChatApp {
+  umbrella header "Pods-SmallChatApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

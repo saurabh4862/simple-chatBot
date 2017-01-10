@@ -1,0 +1,12 @@
+PODS:
+  - AI (0.0.6):
+    - AI/Core (= 0.0.6)
+  - AI/Core (0.0.6)
+
+DEPENDENCIES:
+  - AI
+
+SPEC CHECKSUMS:
+  AI: 406996cc3c37e3f6acba9b77040b285e06cfe59c
+
+COCOAPODS: 0.39.0

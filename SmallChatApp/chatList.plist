@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Chats</key>
+	<array>
+		<dict>
+			<key>des</key>
+			<string>recieve</string>
+			<key>chat</key>
+			<string>hello</string>
+		</dict>
+		<dict>
+			<key>des</key>
+			<string>send</string>
+			<key>chat</key>
+			<string>hi..how r u</string>
+		</dict>
+		<dict>
+			<key>des</key>
+			<string>recieve</string>
+			<key>chat</key>
+			<string>I am fine..how r u</string>
+		</dict>
+		<dict>
+			<key>des</key>
+			<string>send</string>
+			<key>chat</key>
+			<string>nice..thanks its great</string>
+		</dict>
+		<dict>
+			<key>des</key>
+			<string>recieve</string>
+			<key>chat</key>
+			<string>csdfrebrbdvsdevbv cwdergrwbr wertydvdfbvtr gverg ergtrhtyhgr bergregth ytnrtb rt gnth ntnrtnytnytntrhbrwthtrhtrhrthrthrtheth</string>
+		</dict>
+		<dict>
+			<key>des</key>
+			<string>send</string>
+			<key>chat</key>
+			<string>asferveqg cegrtbtrbgb dfgrnytbdv trbrnteynrasg rntynuyjtearf grhrthtynyuyjeje crew ecyhtyjetyhcwrhrtehetyjerhwtrjytjetjetjetyjetyjety</string>
+		</dict>
+		<dict>
+			<key>des</key>
+			<string>recieve</string>
+			<key>chat</key>
+			<string>werergrtgwr ewferqgtbhwr</string>
+		</dict>
+		<dict>
+			<key>des</key>
+			<string>send</string>
+			<key>chat</key>
+			<string>ewt4hthb ergtyetyhetyhetn</string>
+		</dict>
+		<dict>
+			<key>des</key>
+			<string>send</string>
+			<key>chat</key>
+			<string>wet4hthy4j erytyjyun</string>
+		</dict>
+		<dict>
+			<key>des</key>
+			<string>recieve</string>
+			<key>chat</key>
+			<string>ert5j6jb gwtry54j46j6</string>
+		</dict>
+	</array>
+</dict>
+</plist>
