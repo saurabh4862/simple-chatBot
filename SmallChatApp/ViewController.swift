@@ -148,10 +148,15 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         rowCount! += 1
         }
         let res:String
-        if ques == "income" || ques == "savings" || ques == "HRA"{
+        if ques == "income" || ques == "savings" || ques == "HRA" || ques == "rent" || ques == "Allowance" || ques == "interest" || ques == "source"{
             if let x = Int(text){
                 res = ques+add+text
                 print(res)
+            }
+            else if text == "no" || text == "No" || text == "NO"{
+                res = ques+add+text
+                print(res)
+                
             }
             else{
                 res = ""
