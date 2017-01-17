@@ -11,7 +11,7 @@ import AI
 
 class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
     @IBOutlet weak var tableView: UITableView!
-    var chat:[[String:String]] = [["des":"send","chat":"Hi, I am a IT Bot. If you want to calculate your income tax(India) then simply type yes or no"]]
+    var chat:[[String:String]] = [["des":"send","chat":"Hi, I am a IT Bot. If you want to calculate income tax(India) then simply type yes or no"]]
     
     var animation:Bool = false
     var rowCount:Int!
@@ -138,7 +138,8 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         self.textView.resignFirstResponder()
         self.control.removeFromSuperview()
         var text:String=""
-        let ques:String = stringCutter(chat[rowCount-1]["chat"]!)
+        let ques:String = stringCutter(chat[rowCount-1]["chat"]!).ans
+        let search = stringCutter(chat[rowCount-1]["chat"]!).search
         let add = " is "
         
         if self.textView.text! != ""{
@@ -148,12 +149,12 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         rowCount! += 1
         }
         let res:String
-        if ques == "income" || ques == "savings" || ques == "HRA" || ques == "rent" || ques == "Allowance" || ques == "interest" || ques == "source"{
-            if let x = Int(text){
+        if ques != ""{
+            if Int(text) != nil && search == "your"{
                 res = ques+add+text
                 print(res)
             }
-            else if text == "no" || text == "No" || text == "NO"{
+            else if (text == "yes" || text == "No" || text == "Yes" || text == "no") && search == "have" {
                 res = ques+add+text
                 print(res)
                 
@@ -242,24 +243,42 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         
     }
     
-    func stringCutter(s:String)->String{
+    func stringCutter(s:String)->(search:String,ans:String){
         
-        let x:Character = " "
-        let stringToArray = Array(s.characters)
-        var next:Int = 0
-        var prev:Int = 0
+        var list:[String]
+        var search:String = ""
         
-        for i in 0...stringToArray.count-1{
-            if stringToArray[i] == x{
-                count = count+1
-                next = i
-                prev = next
+        list = s.componentsSeparatedByString(" ")
+        
+        var index:Int = -1
+        
+        for i in 0..<list.count{
+            
+            if list[i] == "have"{
+                index = i
+                search = "have"
+                break
+            }
+            if list[i] == "your"{
+                index = i
+                search = "your"
+                break
             }
         }
         
-        let ans:String = s[s.startIndex.advancedBy(next+1)..<s.endIndex]
+        var ans:String = ""
+        if index != -1{
+        for i in index+1..<list.count{
+            ans = ans + list[i] + " "
+        }
+        }
         
-        return ans
+        if ans != ""{
+            var inde = ans.endIndex.advancedBy(-2)
+            ans = ans.substringToIndex(inde)
+        }
+        
+        return (search,ans)
       
         
     }
